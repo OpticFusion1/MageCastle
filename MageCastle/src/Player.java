@@ -6,15 +6,15 @@ public class Player extends Character {
 	Dice dice = new Dice();
 	
 	//variables
-	public String playerName;
+	
 	//array to hold spells
 	public String[] spells = {"Fireball", "Lightning", "Ice Spike", "Stone Fist", "Judgement"};
 	public int hpPotions;
 	public int mpPotions;
 	
 	//constructor to create player after a name is given
-	public Player(String playerName) {
-		this.playerName = playerName;
+	public Player() {
+		
 		attack = 10;
 		defense = 5;
 		maxHp = 50;
@@ -26,10 +26,7 @@ public class Player extends Character {
 		mpPotions = 5;
 	}
 	
-	//getter for playername
-	public String getPlayerName() {
-		return playerName;
-	}
+	
 	
 	//potion-related methods
 	public void useHpPotion() {
@@ -73,7 +70,7 @@ public class Player extends Character {
 	//tostring
 	@Override
 	public String toString() {
-		String playerStats = playerName + " HP: " + currentHp + " MP: " + currentMp  + " HP Potions: " + hpPotions + " MP Potions: " + mpPotions;
+		String playerStats = "HP: " + currentHp + " MP: " + currentMp  + " HP Potions: " + hpPotions + " MP Potions: " + mpPotions;
 		return playerStats;
 	}
 }
